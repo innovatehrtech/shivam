@@ -42,11 +42,7 @@ function App() {
   };
 
   const handleQuoteSubmit = (quoteData) => {
-    if (quoteData.emailJsSent) {
-      showToast(`Audit request sent via EmailJS for ${quoteData.companyName || 'your organization'}!`);
-    } else {
-      showToast(`Audit request submitted for ${quoteData.companyName || 'your organization'}!`);
-    }
+    showToast(`Audit request submitted for ${quoteData.companyName || 'your organization'}!`);
   };
 
   return (

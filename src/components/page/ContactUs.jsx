@@ -24,19 +24,19 @@ export default function ContactUs({ onSendMessage }) {
     setIsSubmitting(false);
 
     if (result.success) {
-      setStatusMessage({ type: 'success', text: 'Message sent successfully via EmailJS!' });
+      setStatusMessage({ type: 'success', text: 'Message sent successfully!' });
       if (onSendMessage) {
-        onSendMessage(`Thank you ${formData.name || 'User'}, your message has been sent via EmailJS!`);
+        onSendMessage(`Thank you ${formData.name || 'User'}, your message has been sent!`);
       }
       setFormData({ name: '', email: '', phone: '', service: 'Payroll & ESIC', message: '' });
     } else {
-      // If EmailJS keys are not yet configured or fail, notify user while gracefully confirming submission
+
       setStatusMessage({
         type: 'info',
         text: 'Message recorded! Note: Configure your EmailJS VITE_EMAILJS_SERVICE_ID in .env for live email delivery.'
       });
       if (onSendMessage) {
-        onSendMessage(`Thank you ${formData.name || 'User'}, your query has been submitted!`);
+        onSendMessage(`Thank you ${formData.name || 'User'}, your query has been submitted `);
       }
       setFormData({ name: '', email: '', phone: '', service: 'Payroll & ESIC', message: '' });
     }
@@ -91,7 +91,7 @@ export default function ContactUs({ onSendMessage }) {
             </div>
             <div className="info-text">
               <h4> Office</h4>
-              <p>Room No. 77, Sector B, Varsha Nagar, Park Site, Vikhroli (W), Mumbai - 400079</p>
+              <p>Shop no. 77, Sector B, Varsha Nagar, Park Site, Vikhroli (W), Mumbai - 400079</p>
             </div>
           </div>
         </div>
@@ -170,7 +170,7 @@ export default function ContactUs({ onSendMessage }) {
             {isSubmitting ? (
               <>
                 <Loader2 size={18} className="animate-spin" />
-                <span>Sending via EmailJS...</span>
+                <span>Sending...</span>
               </>
             ) : (
               <>

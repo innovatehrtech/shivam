@@ -373,7 +373,7 @@ export default function QuoteModal({ isOpen, onClose, onSubmit }) {
                 {isSubmitting ? (
                   <>
                     <Loader2 className="w-4 h-4 animate-spin" />
-                    <span>Submitting via EmailJS...</span>
+                    <span>Submitting</span>
                   </>
                 ) : (
                   <>

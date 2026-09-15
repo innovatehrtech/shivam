@@ -90,7 +90,7 @@ export default function Footer() {
               </li>
               <li className="contact-item">
                 <MapPin size={18} />
-                <span>Room No. 77, Sector B, Varsha Nagar, Park Site, Vikhroli (W), Mumbai - 400079</span>
+                <span>Shop no. 77, Sector B, Varsha Nagar, Park Site, Vikhroli (W), Mumbai - 400079</span>
               </li>
             </ul>
           </div>
